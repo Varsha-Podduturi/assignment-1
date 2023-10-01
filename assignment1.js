@@ -6,6 +6,7 @@ const MenchiesStore = require("./assignment1Menchies");
 // Create a new express application instance
 const app = express();
 
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("www"));
 

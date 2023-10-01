@@ -57,11 +57,6 @@ module.exports = class MenchiesOrder extends Order{
                     break;
                 }
             
-            // case OrderState.CAKE:
-            //     this.stateCur = OrderState.CAKEFLAVOR
-            //     this.sItem2 = "Cake"
-            //     aReturn.push("Which Flavor would you like?")
-            //     break
             case OrderState.FLAVOR:
                 this.stateCur = OrderState.TOPPINGS
                 this.sFlavor = sInput;
