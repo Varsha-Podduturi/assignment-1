@@ -5,8 +5,6 @@ const MenchiesStore = require("./assignment1Menchies");
 
 // Create a new express application instance
 const app = express();
-
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("www"));
 
@@ -35,6 +33,7 @@ app.post("/sms", (req, res) =>{
     let aReply = oOrders[sFrom].handleInput(sMessage);
 
     if(oOrders[sFrom].isDone()){
+        // save instance order data
         totalOrders.push(oOrders[sFrom].getOrderData())
         delete oOrders[sFrom];
     }
